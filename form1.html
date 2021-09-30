@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./nav.css">
+  <title>Document</title>
+</head>
+<body>
+  <p>login</p>
+  <form>
+    <!-- user name: <input type="text" id="e1" class="log-in"  name="username_txt"/> -->
+    <!-- password: <input type="text" id="e2" class="log-in"name="password_txt"/> -->
+
+    <input class="OK" type="button" onclick="chich();" name="btn_ok" value="OK"/>
+    <input class="Reset" type="button" onclick=kick(); name="btn_reset" value="Reset"/>
+    <div id="e3">
+
+    </div>
+  </form>
+  <style>
+    body {
+      background-repeat: no-repeat;
+      margin: 0 auto;
+    }
+    .e3 {
+      display: inline-block;
+    }
+  </style>
+  <script>
+var myVar;
+ function chich() {
+   myVar = setInterval(function anh() {
+    var clos = document.getElementsByClassName("log-in");
+    // var a= document.getElementById("e1").value;
+    var b =document.getElementById("e3");
+    var h1 = document.createElement("h1")
+    for (let i = 0; i < 100;++i ) {
+      // document.getElementById("e3").innerHTML = "Trân khùng" ;
+      h1.innerHTML = "Trân Khùng";
+      b.appendChild(h1)
+      var img = new Image();
+   var div = document.getElementById('e3');
+
+  img.onload = function() {
+  div.appendChild(img);
+  };
+img.src = 'https://lh3.googleusercontent.com/proxy/PZO98K5V0_eApHYcyChVtmJ-LJCfeNQkbg5BR2PQo4UQ4L9SL2Z32cU-KgdShINc8tOGO3y6VS-1LU6r3ZbKnmdH0dLlntGF6Dv9U3Fvscg1zWWPYOoYPfDlj0Izksc5VVD4QGCYyW8JlZEpJhWTZ7xy8x18-1Wiv5RJekuZuo3HduHyIBCoBfyk';
+
+  }},100);
+ }
+
+ function kick() {
+  clearInterval(myVar);
+    var child = document.getElementById("e3");
+    child.parentNode.removeChild(child);
+  document.body.style.backgroundImage="url(https://thiepnhanai.com/wp-content/uploads/2021/05/hinh-anh-hai-huoc-vui-7.jpg)";
+}
+  </script>
+
+</body>
+</html>
